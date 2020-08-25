@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmez votre commande en un clic">
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Ma commande</title> 
+
+</head>
+
+
+<body>
+
+    <!--HEADER-->
+    <header id="header">
+
+      <div class="container">
+  
+        <div class="row">
+  
+  
+          <!--LOGO-->
+          <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <a href="index.html"> <img src="img/Logo_blanc.png" alt="Logo Paniers Paris" id="logo"> </a>
+          </div>
+  
+          <!--HAMBURGER POUR VERSION MOBILE-->
+          <div>
+            <img src="img/menuHamburger.png" alt="Menu" id="menuHamburger">
+          </div>
+  
+          <!--NAV-->
+          <div class="nav col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+            <nav id="navHeader" class="text-center text-nowrap">
+              <a href="index.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Concept</a>
+              <a href="paniersdumois.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Paniers du mois</a>
+              <a href="communaute.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Communauté</a>
+            </nav>
+          </div>
+  
+          <!--SE CONNECTER/ CREER COMPTE/MA COMMANDE-->
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+  
+            <div id="connexion" class="infoscompte">
+  
+              <h5>
+                <i class="fas fa-user-alt"></i>
+                <a href="compte.html">&nbsp; Mon compte </a>
+              </h5>
+  
+              <form action="" method="POST">
+                <input type="email" name="email_header" placeholder="Votre email">
+                <input type="password" name="password_header" placeholder="Votre mot de passe">
+  
+                <input type="submit" name="connexion_header" value="Se connecter">
+                <input type="submit" name="creer_compte_header" value="Créer un compte">
+              </form>
+  
+              <span><a href="compte.html"><small>Mot de passe oublié ? <br> Cliquez ici</small></a> </span>
+  
+              <h5> <a href="macommande.html"><i class="fas fa-shopping-basket"> </i> &nbsp; Ma commande </a> </h5>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </header>
+  <!-- FIN HEADER-->
+
+    <!--MA COMMANDE-->
+    <main>    
+            
+        <div class="container">
+
+            <div class="row">
+
+                <div>
+                  <br>
+                  <br>
+                </div>
+
+                <!--TITRE-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                    <h2> <i class="fas fa-shopping-basket"></i> Ma Commande</h2>
+                </div>  
+
+                <!--TABLE-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                    <div id="maCommande">
+                
+                      <div>
+                          <table>
+                              <thead>
+                                  <tr>
+                                      <th>Article(s)</th> 
+                                      <th>Nom(s) article(s)</th>
+                                      <th>Quantité article(s)</th>
+                                      <th>Prix unitaire</th>
+                                      <th><i class="fas fa-trash-alt"></i></th>
+                                  </tr>
+                              </thead>
+
+                              <tbody>
+                                  <tr>
+                                      <td> <img src="img/paniersvignette.jpg" alt="Panier" class="vignetteachat"> </td>
+                                      <td> Panier Duo </td>
+                                      <td> 
+                                          <select name="quantite" id="quantite">
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                          </select>
+                                      </td>
+                                      <td> 27 &euro; </td>
+                                      <td> <input type="checkbox"> </td>
+                                  </tr>
+                              </tbody>
+                                  
+                              <tfoot class="montant">
+                                  <tr>
+                                      <td colspan="3"> Montant total </td>
+                                      <td colspan="2"> 27&euro;</td>
+                                  </tr>
+                              </tfoot>
+                                  
+                          </table>
+                      </div>
+
+                      <br> <br>
+
+                      <div id="payerCommande" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                          
+                          <!--Bouton 1-->
+                          <form>
+                              <button> <a href="paniersdumois.html">Modifier ma sélection</a></button>
+                          </form>
+
+                          <!--Bouton 2 JS-->
+                          <form id ="achat">
+                              <button type="submit"> Régler ma commande</button>
+                          </form>
+
+                      </div>
+
+                    </div>
+                </div>
+
+                <!--MODAL AFFICHAGE AVEC JS--> 
+                <div id="alertConnexionCommande" class= "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                  <p> Merci de vous connecter ou de créer un compte</p>
+                  <i id = "closeAlertConnexionCommande" class="fas fa-window-close"></i>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </main>
+    <!--FIN MA COMMANDE-->
+
+      <!--FOOTER-->
+      <footer id="footer">
+
+        <div class="container">
+    
+          <div class="row">
+    
+            <!--NEWSLETTER-->
+            <div class="newsletter col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+    
+              <form method="POST" id="formRecevoirNewsletter">
+                <p> <small> <i class="far fa-envelope"></i> &nbsp;Recevoir notre newsletter</small> </p>
+    
+                <input type="email" name="emailNewsletter" id="emailNewsletter" placeholder="Votre email">
+                <input type="submit" name="confirmation_newsletter" value="Confirmer">
+    
+                <!--affichage texte avec js-->
+                <p> <small id="txtConfNewsletter"> </small></p>
+              </form>
+    
+            </div>
+    
+            <!--NAV-->
+            <div class="navfooter col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <nav>
+                <a href="compte.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Se connecter</a>
+                <a href="compte.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Créer un compte</a>
+                <a href="contact.html"><img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Nous contacter</a>
+                <a href="mentions_legales.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Mentions
+                  légales</a>
+              </nav>
+            </div>
+    
+            <!--RS-->
+            <div class="reseaux col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+              <p><small>Restons connectés</small> </p>
+              <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+    
+          </div>
+    
+          <!--CREDITS-->
+          <div class="row">
+            <p id="credits" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <span>&copy; &nbsp; Bastien DAUGENNE, Sarah HAMI, Linda PHAN </span>
+            </p>
+          </div>
+    
+        </div>
+    
+      </footer>
+    <!--FIN FOOTER-->
+
+</body>
+
+<script src="javascript/script_footer.js"> </script>
+<script src="javascript/script_header.js"> </script>
+<script src="javascript/script_macommande.js"> </script>
+    
+</html>

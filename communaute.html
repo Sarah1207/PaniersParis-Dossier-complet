@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Un espace chat dédié aux membres du réseau Paniers-Paris">
+  <meta name="keywords" content="communauté, communication, chat, annonces, instructions" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="javascript/script_communaute.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Communauté</title>
+
+</head>
+
+
+<body>
+
+  <!--HEADER-->
+  <header id="header">
+
+    <div class="container">
+
+      <div class="row">
+
+
+        <!--LOGO-->
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+          <a href="index.html"> <img src="img/Logo_blanc.png" alt="Logo Paniers Paris" id="logo"> </a>
+        </div>
+
+        <!--HAMBURGER POUR VERSION MOBILE-->
+        <div>
+          <img src="img/menuHamburger.png" alt="Menu" id="menuHamburger">
+        </div>
+
+        <!--NAV-->
+        <div class="nav col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+          <nav id="navHeader" class="text-center text-nowrap">
+            <a href="index.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Concept</a>
+            <a href="paniersdumois.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Paniers du mois</a>
+            <a href="communaute.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Communauté</a>
+          </nav>
+        </div>
+
+        <!--SE CONNECTER/ CREER COMPTE/MA COMMANDE-->
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+
+          <div id="connexion" class="infoscompte">
+
+            <h5>
+              <i class="fas fa-user-alt"></i>
+              <a href="compte.html">&nbsp; Mon compte </a>
+            </h5>
+
+            <form action="" method="POST">
+              <input type="email" name="email_header" placeholder="Votre email">
+              <input type="password" name="password_header" placeholder="Votre mot de passe">
+
+              <input type="submit" name="connexion_header" value="Se connecter">
+              <input type="submit" name="creer_compte_header" value="Créer un compte">
+            </form>
+
+            <span><a href="compte.html"><small>Mot de passe oublié ? <br> Cliquez ici</small></a> </span>
+
+            <h5> <a href="macommande.html"><i class="fas fa-shopping-basket"> </i> &nbsp; Ma commande </a> </h5>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+  <!-- FIN HEADER-->
+
+  <!--MAIN-->
+  <main id="communaute">
+
+    <h2>Espace Communauté</h2>
+
+    <div class="container">
+
+      <div class="row">
+
+        <!--ANNONCES SITE-->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-16 col-xl-6">
+
+          <article id="annoncesCom" class="article">
+
+            <div class="titres-articles">
+              <h4>Annonces</h4>
+            </div>
+
+            <div id="annonces-slider">
+              <div class="text-annonces">
+                <p><b>Congés été :</b> L'équipe de Paris-Paniers prendra ses congés du 1er au 18 août, vos commandes
+                  seront mises en attentes d'ici là.
+                  A bientôt! </p>
+              </div>
+
+              <div class="text-annonces">
+                <p><b>Jusqu'au 1er août :</b> Faites le plein de fruits et légumes du soleil ! Tomates variétés
+                  anciennes, carottes, abricots et prunes disponibles en stocks ! </p>
+              </div>
+
+              <div class="text-annonces">
+                <p><b>Anniversaire :</b> Toute l'équipe de Paniers-Paris souhaite un joyeux anniversaire ensoleillé à
+                  Thomas, membre de notre réseau depuis 3 mois !</p>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+        <!--INSTRUCTIONS SITE-->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-16 col-xl-6">
+
+          <article class="article">
+
+            <div class="titres-articles">
+              <h4>Instructions</h4>
+            </div>
+
+            <div id="instructionsCom">
+              <p><b>Bienvenue dans l'espace Communauté de Paniers-Paris !
+                  Ce chat est mis à votre disposition afin que nos membres puissent communiquer entre eux.
+                  En vous connectant à votre compte, vous avez accès directement à cette fonctionnalité.
+                  Il ne vous reste plus qu'à vous exprimer en saisissant votre message dans l'espace texte sous la
+                  fenêtre de chat et envoyer. </b> </p>
+
+              <p id="avert">
+                Attention : veuillez échanger dans la courtoisie et le respect.
+                Tout abus ou mésusage entraînera une suspension provisoire de votre compte ou sa suppression définitive
+                en cas de récidive.
+                Dans un tel cas, vous serez averti et votre dernière commande en cours sera honorée.
+                <br>
+                <br>
+                Pour toutes informations, se référer à nos conditions d'utilisation accessibles depuis
+                (&laquo; Mentions légales &raquo;).
+              </p>
+              <br>
+              <p id="signaturePP">
+                -l'équipe Paniers-Paris-
+              </p>
+
+            </div>
+          </article>
+
+        </div>
+
+        <div class="container" id="chat-block" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+          <!--CHAT STATUTS-->
+          <table class="status">
+
+            <tr>
+
+              <td>
+                <span id="statusResponse">
+
+                </span>
+
+                <select name="status" id="status" style="width:200px;" onchange="setStatus(this)">
+
+                  <option value="0">Absent</option>
+
+                  <option value="1">Occup&eacute;</option>
+
+                  <option value="2" selected>En ligne</option>
+
+                </select>
+              </td>
+
+            </tr>
+
+          </table>
+
+          <!-- ZONE MESSAGES -->
+          <table class="chat">
+
+            <tr>
+
+              <td valign="top" id="text-td">
+
+                <div id="annonce">
+
+
+                </div>
+
+                <div id="text">
+
+                  <div id="loading">
+
+                    <span class="info" id="info">Chargement du chat en cours...</span>
+                    <br>
+                    <img src="gif/ajax-chat-loader.gif" alt="patientez...">
+
+                  </div>
+
+                </div>
+              </td>
+
+              <!-- COLONNE MEMBRES CONNECTÉS AU CHAT -->
+              <td valign="top" id="users-td">
+                <div id="users">Chargement</div>
+              </td>
+
+            </tr>
+
+          </table>
+
+          <!-- ZONE SAISIE TEXTE -->
+          <a name="post">
+
+          </a>
+
+          <table class="post-message">
+
+            <tr>
+
+              <td>
+
+                <form action="" method="POST" onsubmit="envoyer(); return false;">
+
+                  <input type="text" name="message" id="message" maxlength="255" />
+                  <input type="button" name="post" id="post" onclick="envoyer()" value="Envoyer" />
+
+                </form>
+
+                <div id="responsePost" style="display:none">
+
+                </div>
+
+              </td>
+
+            </tr>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  <!--FIN MAIN-->
+
+  <!--FOOTER-->
+  <footer id="footer">
+
+    <div class="container">
+
+      <div class="row">
+
+        <!--NEWSLETTER-->
+        <div class="newsletter col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+
+          <form method="POST" id="formRecevoirNewsletter">
+            <p> <small> <i class="far fa-envelope"></i> &nbsp;Recevoir notre newsletter</small> </p>
+
+            <input type="email" name="emailNewsletter" id="emailNewsletter" placeholder="Votre email">
+            <input type="submit" name="confirmation_newsletter" value="Confirmer">
+
+            <!--affichage texte avec js-->
+            <p> <small id="txtConfNewsletter"> </small></p>
+          </form>
+
+        </div>
+
+        <!--NAV-->
+        <div class="navfooter col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <nav>
+            <a href="compte.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Se connecter</a>
+            <a href="compte.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Créer un compte</a>
+            <a href="contact.html"><img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Nous contacter</a>
+            <a href="mentions_legales.html"> <img src="img/puce_nav_blanc.png" alt="puce_nav_blanc"> Mentions
+              légales</a>
+          </nav>
+        </div>
+
+        <!--RS-->
+        <div class="reseaux col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <p><small>Restons connectés</small> </p>
+          <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+      </div>
+
+      <!--CREDITS-->
+      <div class="row">
+        <p id="credits" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <span>&copy; &nbsp; Bastien DAUGENNE, Sarah HAMI, Linda PHAN </span>
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+  <!--FIN FOOTER-->
+
+</body>
+
+
+<script src="javascript/script_header.js"> </script>
+<script src="javascript/script_footer.js"></script>
+
+</html>
